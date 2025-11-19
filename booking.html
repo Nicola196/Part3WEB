@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your appointment at Luxe Nails & Spa - Easy online scheduling for manicures, pedicures, and nail art">
+    <title>Book Appointment - Luxe Nails & Spa</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Luxe Nails & Spa" width="150" height="50">
+                <h1>Luxe Nails & Spa</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="booking.html" aria-current="page">Book Now</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="booking.html" class="btn btn-primary">Book Appointment</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>Book Your Appointment</h1>
+                <p>Schedule your luxury nail care experience</p>
+            </div>
+        </section>
+
+        <section class="booking-section">
+            <div class="container">
+                <div class="booking-container">
+                    <form id="booking-form" class="booking-form" novalidate>
+                        <div class="form-step active" id="step-1">
+                            <h3>1. Select Services</h3>
+                            <div class="service-selection">
+                                <div class="service-option">
+                                    <input type="checkbox" id="manicure" name="services" value="manicure">
+                                    <label for="manicure">
+                                        <span class="service-name">Luxe Gel Manicure</span>
+                                        <span class="service-price">R45</span>
+                                        <span class="service-duration">60 min</span>
+                                    </label>
+                                </div>
+                                <div class="service-option">
+                                    <input type="checkbox" id="pedicure" name="services" value="pedicure">
+                                    <label for="pedicure">
+                                        <span class="service-name">Signature Pedicure</span>
+                                        <span class="service-price">R55</span>
+                                        <span class="service-duration">60 min</span>
+                                    </label>
+                                </div>
+                                <div class="service-option">
+                                    <input type="checkbox" id="nail-art" name="services" value="nail-art">
+                                    <label for="nail-art">
+                                        <span class="service-name">Basic Nail Art</span>
+                                        <span class="service-price">+R15</span>
+                                        <span class="service-duration">+15 min</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="button" class="btn next-step" data-next="2">Next</button>
+                        </div>
+
+                        <div class="form-step" id="step-2">
+                            <h3>2. Choose Date & Time</h3>
+                            <div class="date-time-selection">
+                                <div class="calendar">
+                                    <label for="appointment-date">Select Date:</label>
+                                    <input type="date" id="appointment-date" name="date" required min="">
+                                </div>
+                                <div class="time-slots">
+                                    <h4>Available Times</h4>
+                                    <div class="slots-grid" id="time-slots-container">
+                                        <!-- Time slots populated by JavaScript -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step-buttons">
+                                <button type="button" class="btn btn-outline prev-step" data-prev="1">Back</button>
+                                <button type="button" class="btn next-step" data-next="3">Next</button>
+                            </div>
+                        </div>
+
+                        <div class="form-step" id="step-3">
+                            <h3>3. Your Information</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="name">Full Name *</label>
+                                    <input type="text" id="name" name="name" required minlength="2">
+                                    <div class="error-message" id="name-error"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required>
+                                    <div class="error-message" id="email-error"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required pattern="[\+]?[1-9][\d]{0,15}">
+                                    <div class="error-message" id="phone-error"></div>
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="notes">Special Requests</label>
+                                    <textarea id="notes" name="notes" placeholder="Any specific design ideas or allergies..."></textarea>
+                                </div>
+                            </div>
+                            <div class="step-buttons">
+                                <button type="button" class="btn btn-outline prev-step" data-prev="2">Back</button>
+                                <button type="submit" class="btn">Confirm Booking</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="booking-summary">
+                        <h3>Appointment Summary</h3>
+                        <div class="summary-content">
+                            <div class="summary-item">
+                                <strong>Services:</strong>
+                                <span id="summary-services">None selected</span>
+                            </div>
+                            <div class="summary-item">
+                                <strong>Date & Time:</strong>
+                                <span id="summary-datetime">Not selected</span>
+                            </div>
+                            <div class="summary-item">
+                                <strong>Duration:</strong>
+                                <span id="summary-duration">0 min</span>
+                            </div>
+                            <div class="summary-total">
+                                <strong>Total:</strong>
+                                <span id="summary-total">R0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Luxe Nails & Spa</h3>
+                    <p>Premium nail care and luxury spa experiences.</p>
+                    <div class="contact-info">
+                        <p>📞 <a href="tel:072 633 4032">072 633 4032</a></p>
+                        <p>📧 <a href="mailto:hello@luxenails.com">hello@luxenails.com</a></p>
+                        <p>📍 123 Luxury Lane, Beauty District</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Hours</h3>
+                    <div class="hours">
+                        <p>Monday - Friday: 9AM - 8PM</p>
+                        <p>Saturday: 9AM - 7PM</p>
+                        <p>Sunday: 10AM - 5PM</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                        <a href="#" aria-label="TikTok">TikTok</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Luxe Nails & Spa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/booking.js"></script>
+</body>
+</html>

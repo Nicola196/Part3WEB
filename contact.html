@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Luxe Nails & Spa - Get in touch with us for appointments, questions, or feedback">
+    <title>Contact Us - Luxe Nails & Spa</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Luxe Nails & Spa" width="150" height="50">
+                <h1>Luxe Nails & Spa</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="booking.html">Book Now</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="booking.html" class="btn btn-primary">Book Appointment</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Get in touch - we'd love to hear from you</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Visit Our Salon</h2>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <h3>📍 Address</h3>
+                                <p>123 Luxury Lane<br>Beauty District<br>9986</p>
+                            </div>
+                            <div class="contact-item">
+                                <h3>📞 Phone</h3>
+                                <p><a href="tel:072 633 4032">072 633 4032</a></p>
+                            </div>
+                            <div class="contact-item">
+                                <h3>📧 Email</h3>
+                                <p><a href="mailto:hello@luxenails.com">hello@luxenails.com</a></p>
+                            </div>
+                            <div class="contact-item">
+                                <h3>🕒 Hours</h3>
+                                <p>Monday - Friday: 9AM - 8PM<br>
+                                   Saturday: 9AM - 7PM<br>
+                                   Sunday: 10AM - 5PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="map-placeholder">
+                            <div style="background-color: #e0e0e0; height: 300px; border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; color: var(--text-light);">
+                                🗺️ Interactive Map<br>
+                                <small>(Would show salon location)</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <h2>Send us a Message</h2>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="contact-name">Full Name *</label>
+                                <input type="text" id="contact-name" name="name" required minlength="2">
+                                <div class="error-message" id="contact-name-error"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-email">Email Address *</label>
+                                <input type="email" id="contact-email" name="email" required>
+                                <div class="error-message" id="contact-email-error"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-phone">Phone Number</label>
+                                <input type="tel" id="contact-phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-subject">Subject *</label>
+                                <select id="contact-subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="appointment">Appointment Question</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="complaint">Complaint</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-message">Message *</label>
+                                <textarea id="contact-message" name="message" required minlength="10" placeholder="Tell us how we can help you..."></textarea>
+                                <div class="error-message" id="contact-message-error"></div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>Do I need to book an appointment?</h3>
+                        <p>While walk-ins are welcome, we highly recommend booking an appointment to guarantee your preferred time slot, especially during weekends and holidays.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What's your cancellation policy?</h3>
+                        <p>We require 24 hours notice for cancellations. Late cancellations may incur a fee to respect our artists' time.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do you offer group bookings?</h3>
+                        <p>Yes! We love hosting bridal parties, birthday celebrations, and other group events. Contact us for special group rates and availability.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What payment methods do you accept?</h3>
+                        <p>We accept cash, all major credit cards, and digital payments like Apple Pay and Google Pay.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Luxe Nails & Spa</h3>
+                    <p>Premium nail care and luxury spa experiences.</p>
+                    <div class="contact-info">
+                        <p>📞 <a href="tel:072 633 4032">072 633 4032</a></p>
+                        <p>📧 <a href="mailto:hello@luxenails.com">hello@luxenails.com</a></p>
+                        <p>📍 123 Luxury Lane, Beauty District</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Hours</h3>
+                    <div class="hours">
+                        <p>Monday - Friday: 9AM - 8PM</p>
+                        <p>Saturday: 9AM - 7PM</p>
+                        <p>Sunday: 10AM - 5PM</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                        <a href="#" aria-label="TikTok">TikTok</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Luxe Nails & Spa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+// Main JavaScript functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize any global functionality
+    console.log('Luxe Nails & Spa - Premium Nail Care');
+    
+    // Add any global event listeners or functionality here
+});
